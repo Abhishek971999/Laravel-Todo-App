@@ -1,0 +1,110 @@
+body {
+    background-image: linear-gradient(to right, #d6e4f0, #b1c0d6);
+    overflow-x: hidden;
+}
+.create-form {
+    background-color: #46529d;
+    padding: 40px;
+    width: 20%;
+    height: 80vh;
+    margin: auto;
+    box-shadow: 4px 4px 7px 1px #0000062a;
+}
+.show-form {
+    background-color: #fff;
+    width: 30%;
+    height: 80vh;
+    margin: auto;
+    box-shadow: 4px 4px 7px 1px #0000062a;
+}
+.header {
+    display: flex;
+}
+.content-show {
+    height: 61vh;
+    overflow-y: scroll;
+}
+.header-text {
+    letter-spacing: 2px;
+    margin-top: 10px;
+    margin-left: 20px;
+    text-transform: uppercase;
+    color: white;
+    text-align: center;
+}
+.header-img {
+    text-align: center;
+}
+.header-image {
+    background-image: url("https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80");
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 120px;
+}
+.indi-task:hover {
+    text-decoration: line-through;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+}
+.del-btn {
+    background: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+input {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    outline: 0;
+    border-width: 0 0 2px;
+    border-color: #848dcc;
+    transition: all 0.3s;
+    background: transparent;
+    font-size: x-large;
+    color: #848dcc;
+}
+input:focus {
+    border-color: white;
+    color: white;
+}
+input::placeholder {
+    color: #848dcc;
+}
+
+.button {
+    margin-top: 30px;
+    outline: none;
+    border: none;
+    background: #2ebaee;
+    color: white;
+    text-transform: uppercase;
+    padding: 10px;
+    font-size: small;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.button:hover {
+    transform: translateY(-2);
+    box-shadow: 4px 4px 7px 1px #0000062a;
+}
+@media screen and (max-width: 780px) {
+    .create-form {
+        width: 50%;
+    }
+    .show-form {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .create-form {
+        width: 80%;
+    }
+    .show-form {
+        width: 80%;
+    }
+}

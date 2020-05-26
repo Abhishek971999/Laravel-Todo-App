@@ -8,4 +8,8 @@ class Task extends Model
 {
     
     protected $table = 'todo';
+    protected $fillable = [
+        'title',
+        'desc'
+    ];
 }

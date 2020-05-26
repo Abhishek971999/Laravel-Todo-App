@@ -11,19 +11,27 @@ class TaskController extends Controller
     }
     public function index(){
         $task = Task::all();
-        return view('show',['task'=>$task]);
+        return view('show',compact('task'));
     }
 
     public function store(){
-        $task = new Task();
-        $task->title = request('task');
+        $task = Task::create($this->validateData());
         $task->save();
-        // error_log(request('task'));
         return redirect('/');
     }
-    public function destroy($id){
-        $task = Task::findOrFail($id);
-        $task->delete();
+    public function destroy(Task $id){
+        // $task = Task::findOrFail($id);
+        // $task->delete();
+        $id->delete();
         return redirect('/');
     }
+    protected function validateData(){
+
+        return request()->validate([
+            'title'=>'required',
+            'desc'=>'required'
+        ]);
+    }
+
+    
 }
